@@ -10,7 +10,7 @@ version: 1.0. {build}
    verbosity: minimal
  test:
    assemblies:
-     - '.\*\Test_2.dll'
+     - 'Release\Test_2.dll'
  after_test:
    - vstest.console /logger:Appveyor Release\Test_2.dll
  artifacts:
