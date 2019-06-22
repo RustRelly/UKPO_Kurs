@@ -1,0 +1,21 @@
+[2018-12-21 05:49:17] [info] Start Program:
+Path:"C:\Users\Katya\source\repos\UPOLR2\x64\Release\UPOLR2.exe"
+Arguments:
+Working directory: "C:\Users\Katya\source\repos\UPOLR2\UPOLR2\"
+Modules: Selected: C:\Users\Katya\source\repos\UPOLR2\x64\Release\UPOLR2.exe Excluded: 
+Sources: Selected: C:\Users\Katya\source\repos\UPOLR2\UPOLR2 Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 1
+Export: Binary C:\Users\Katya\AppData\Local\Temp\todfk13p.mi5 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2018-12-21 05:49:18] [info] Module: C:\Users\Katya\source\repos\UPOLR2\x64\Release\UPOLR2.exe is selected because it matches selected pattern: C:\Users\Katya\source\repos\UPOLR2\x64\Release\UPOLR2.exe
+[2018-12-21 05:49:25] [info] ----------------------------------------------------
+[2018-12-21 05:49:25] [info] Coverage binary generated in file: C:\Users\Katya\AppData\Local\Temp\todfk13p.mi5
+[2018-12-21 05:49:25] [info] ----------------------------------------------------
