@@ -1,19 +1,17 @@
-version: 1.0. {build}
- image: Visual Studio 2017
- configuration:
- - Release
- before_build:
-   - ps: $Env:PLATFORM_TOOLSET="v141"
- build:
-   project: UPOLR2.sln
-   parallel: true
-   verbosity: minimal
- test:
-   assemblies:
-     - 'Release\Test_2.dll'
- after_test:
-   - vstest.console /logger:Appveyor Release\Test_2.dll
- artifacts:
- - path: Release\UPOLR2.exe
-   name: Binary
- deploy: off 
+-TOOLCHAIN: msvc15
+APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+
+init:
+    # секция инициализации, исполняется до клонирования проекта
+    # скорее всего, строчка ниже необязательна (так должно быть по умолчанию),
+    # вместе с тем, она присутствует в официальных примерах, так что пусть будет:
+    - git config --global core.autocrlf input
+
+clone_folder: C:\Users\Katya\source\repos\UPOLR2_2# выбираем локальную директорию для клонирования
+shallow_clone: true              # копируем только последний коммит, без истории (git clone --depth 1)
+
+matrix:
+    fast_finish: false           # не останавливаемся после возникновения ошибки в каком-то из заданий
+    
+test_script:
+  vstest.console Release/Test_2.dll
