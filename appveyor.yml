@@ -1,19 +1,19 @@
 version: 1.0. {build}
-	image: Visual Studio 2017
-	configuration:
-	- Release
-	before_build:
-	  - ps: $Env:PLATFORM_TOOLSET="v141"
-	build:
-	  project: UKPO_2_V.sln
-	  parallel: true
-	  verbosity: minimal
-	test:
-	  assemblies:
-	    - '.\*\UKPO_2_V_test.dll'
-	after_test:
-	  - vstest.console /logger:Appveyor x64\Release\UKPO_2_V_test.dll
-	artifacts:
-	- path: x64\Release\UKPO_2_V.exe
-	  name: Binary
-	deploy: off 
+ image: Visual Studio 2017
+ configuration:
+ - Release
+ before_build:
+   - ps: $Env:PLATFORM_TOOLSET="v141"
+ build:
+   project: UKPO_2_V.sln
+   parallel: true
+   verbosity: minimal
+ test:
+   assemblies:
+     - '.\*\UKPO_2_V_test.dll'
+ after_test:
+   - vstest.console /logger:Appveyor x64\Release\UKPO_2_V_test.dll
+ artifacts:
+ - path: x64\Release\UKPO_2_V.exe
+   name: Binary
+ deploy: off 
