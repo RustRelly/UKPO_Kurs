@@ -1,5 +1,4 @@
--TOOLCHAIN: msvc15
-APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+image: Visual Studio 2017   # на этом VM-образе установлены все Visual Studio с 2008 по 2015
 
 init:
     # секция инициализации, исполняется до клонирования проекта
