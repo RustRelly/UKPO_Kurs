@@ -6,11 +6,26 @@ init:
     # вместе с тем, она присутствует в официальных примерах, так что пусть будет:
     - git config --global core.autocrlf input
 
-clone_folder: C:\Users\Katya\source\repos\UPOLR2# выбираем локальную директорию для клонирования
+clone_folder: c:\projects\my-prj # выбираем локальную директорию для клонирования
 shallow_clone: true              # копируем только последний коммит, без истории (git clone --depth 1)
 
 matrix:
     fast_finish: false           # не останавливаемся после возникновения ошибки в каком-то из заданий
-    
+
+configuration:
+    - Release
+
+environment:
+    matrix:
+        - TOOLCHAIN: msvc17
+
+build_script:
+    # скрипт сборки проекта:
+    - mkdir build
+    - cd build
+
 test_script:
-  vstest.console Release/Test_2.dll
+    # скрипт тестирования проекта:
+    stest.console ./Release/Test_2.dll
+
+    force_update: true
