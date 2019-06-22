@@ -11,21 +11,6 @@ shallow_clone: true              # копируем только последн�
 
 matrix:
     fast_finish: false           # не останавливаемся после возникновения ошибки в каком-то из заданий
-
-configuration:
-    - Release
-
-environment:
-    matrix:
-        - TOOLCHAIN: msvc17
-
-build_script:
-    # скрипт сборки проекта:
-    - mkdir build
-    - cd build
-
+    
 test_script:
-    # скрипт тестирования проекта:
-    stest.console ./Release/Test_2.dll
-
-    force_update: true
+  vstest.console ./Debug/Test_2.dll
