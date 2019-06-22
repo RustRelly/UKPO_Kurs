@@ -5,15 +5,15 @@ version: 1.0. {build}
  before_build:
    - ps: $Env:PLATFORM_TOOLSET="v141"
  build:
-   project: UKPO_2_V.sln
+   project: UPOLR2.sln
    parallel: true
    verbosity: minimal
  test:
    assemblies:
-     - '.\*\UKPO_2_V_test.dll'
+     - '.\*\Test_2.dll'
  after_test:
-   - vstest.console /logger:Appveyor x64\Release\UKPO_2_V_test.dll
+   - vstest.console /logger:Appveyor Release\Test_2.dll
  artifacts:
- - path: x64\Release\UKPO_2_V.exe
+ - path: Release\UPOLR2.exe
    name: Binary
  deploy: off 
