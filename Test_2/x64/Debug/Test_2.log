@@ -1,0 +1,2 @@
+﻿  unittest2.cpp
+c:\users\katya\source\repos\upolr2\test_2\unittest2.cpp(69): fatal error C1010: непредвиденный конец файла во время поиска предкомпилированного заголовка. Возможно, вы забыли добавить директиву "#include "stdafx.h"" в источник.
