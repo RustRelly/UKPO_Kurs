@@ -21,4 +21,4 @@ configuration:
     - Release
     
 test_script:
-  vstest.console .\Debug\Test_2.dll
+  vstest.console .\x64\Release\Test_2.dll
