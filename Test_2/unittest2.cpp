@@ -77,7 +77,7 @@ namespace TestLR2
 		TEST_METHOD(NegMult)
 		{
 			std::string str = "-3*(-2)";
-			Assert::AreEqual<std::string>("-5", ex(str), false);
+			Assert::AreEqual<std::string>("6", ex(str), false);
 		}
 	};
 }
