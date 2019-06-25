@@ -79,5 +79,10 @@ namespace TestLR2
 			std::string str = "-3*(-2)";
 			Assert::AreEqual<std::string>("6", ex(str), false);
 		}
+		TEST_METHOD(Squ)
+		{
+			std::string str = "2-5^2";
+			Assert::IsFalse(search(parsing(str)));
+		}
 	};
 }
